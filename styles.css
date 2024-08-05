@@ -1,4 +1,4 @@
-/* Genel Stil Ayarlarý */
+/* Genel Stil Ayarları */
 * {
   margin: 0;
   padding: 0;
@@ -15,11 +15,11 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
-  overflow: hidden; /* Scroll olmasýný engelle */
+  overflow: hidden; /* Scroll olmasını engelle */
   padding-top: 10px;
 }
 
-/* Ana Ýçerik */
+/* Ana İçerik */
 main {
   padding: 20px 0;
   min-height: 100vh;
@@ -36,7 +36,7 @@ main {
 
 /* Arama Kutusu */
 .search-box {
-  position: relative; /* Hayalet metni input ile ayný konuma getirebilmek için */
+  position: relative; /* Hayalet metni input ile aynı konuma getirebilmek için */
   display: flex;
   align-items: center;
   background-color: #1f1f1f;
@@ -70,7 +70,7 @@ main {
 /* Hayalet Metin Stilleri */
 .ghost-text {
   position: absolute;
-  color: #32CD32; /* Parlak yeþil renk */
+  color: #32CD32; /* Parlak yeşil renk */
   font-family: 'Arial', sans-serif;
   font-size: 1.2rem;
   pointer-events: none;
@@ -79,7 +79,7 @@ main {
   transform: translateY(-50%);
 }
 
-/* Sonuç Alaný */
+/* Sonuç Alanı */
 .result {
   text-align: left;
   margin-top: 40px; 
@@ -98,20 +98,28 @@ main {
   color: #2d6536;
 }
 
-/* Kelime Sayýsý Bilgisi */
+/* Kelime Sayısı Bilgisi */
 .word-count {
   color: #5C5F60;
   font-size: 1rem;
   margin-bottom: 10px;
-  text-align: center; /* Mesajý ortala */
+  text-align: center; /* Mesajı ortala */
 }
 
 .word-count .highlight {
-  font-weight: bold; /* x kýsmýný kalýn yap */
+  font-weight: bold; /* x kısmını kalın yap */
 }
 
+/* Hata Mesajı Stili */
+.error {
+  color: #dc3545;
+  font-family: 'Courier New', Courier, monospace; /* Özel font */
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
 
-/* Ekran Boyutuna Göre Duyarlýlýk (Responsive) */
+/* Ekran Boyutuna Göre Duyarlılık (Responsive) */
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -135,9 +143,9 @@ main {
 }
 
 .search-box.error {
-  box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.8); /* Kýrmýzý renkte gölge */
+  box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.8); /* Kırmızı renkte gölge */
 }
 
 .search-box.error input {
-  caret-color: #dc3545; /* Kýrmýzý imleç rengi */
+  caret-color: #dc3545; /* Kırmızı imleç rengi */
 }
