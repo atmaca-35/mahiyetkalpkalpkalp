@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const searchBox = document.getElementById('searchBox');
     const resultDiv = document.getElementById('result');
     const ghostText = document.getElementById('ghostText');
@@ -18,7 +18,7 @@
         wordCountElement.innerHTML = `There are currently <span class="highlight">${wordCount}</span> words available.`;
     } catch (error) {
         console.error('Sözlük yüklenirken bir hata oluştu:', error);
-        resultDiv.innerHTML = '<h3 class="error">Sözlük yüklenirken bir hata oluştu.</h3>';
+        resultDiv.innerHTML = '<h3 class="error">Sözlük yüklenirken bir hata oluştu. Lütfen sayfayı yenileyin.</h3>';
     }
 
     // Arama Fonksiyonu
@@ -37,12 +37,12 @@
         }
 
         // Türkçe karakter normalizasyonu
-        const normalizedQuery = query.replace(/I/g, 'ı').toLowerCase();
+        const normalizedQuery = query.replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase();
         
         const filteredWords = Object.keys(dictionaryData)
             .filter(word => {
                 // Türkçe karakter normalizasyonu
-                const normalizedWord = word.replace(/I/g, 'ı').toLowerCase();
+                const normalizedWord = word.replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase();
                 return normalizedWord.startsWith(normalizedQuery);
             })
             .sort();
@@ -108,7 +108,7 @@
         const queryLower = query.toLowerCase();
         const matchingWord = Object.keys(dictionaryData)
             .find(word => {
-                const normalizedWord = word.replace(/I/g, 'ı').toLowerCase();
+                const normalizedWord = word.replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase();
                 return normalizedWord.startsWith(queryLower);
             });
 
