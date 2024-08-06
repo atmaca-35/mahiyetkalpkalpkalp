@@ -144,10 +144,8 @@ main {
 
 .search-box.error {
   box-shadow: 0 0 15px 5px rgba(220, 53, 69, 0.8); /* Kırmızı renkte gölge */
-  margin-top: 15px;
 }
 
 .search-box.error input {
-  caret-color: #dc3545; /* Kırmızı imleç rengi */
-  margin-top: 15px;
+  caret-color: #dc3545; /* Kırmızı imleç rengi */ 
 }
