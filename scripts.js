@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         wordCountElement.innerHTML = `There are currently <span class="highlight">${wordCount}</span> words available.`;
     } catch (error) {
         console.error('Sözlük yüklenirken bir hata oluştu:', error);
-        resultDiv.innerHTML = '<h3 class="error">Sözlük yüklenirken bir hata oluştu. Lütfen sayfayı yenileyin.</h3>';
+        resultDiv.innerHTML = '<h3 class="error">';
     }
 
     // Arama Fonksiyonu
